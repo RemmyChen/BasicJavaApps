@@ -1,0 +1,4 @@
+com/chen/dao/TestDAO.class
+com/chen/model/Test.class
+com/chen/controllers/HomeController.class
+com/chen/service/TestService.class

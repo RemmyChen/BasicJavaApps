@@ -1,0 +1,16 @@
+html{min-width:980px;}
+body{margin:0;font:12px/1 "Microsoft Yahei",arial,"Hiragino Sans GB",sans-serif;line-height: 2em;}
+p,table,td,tr,li,ul{border:none;  background-color: transparent;border-collapse: collapse;border-spacing: 0;margin:0;padding:0;list-style:none;}
+.header{height:66px;color:#cfcdcc;font-size:16px;}
+.main{height:640px;}
+
+.control-group{overflow:hidden;zoom:1;padding:25px 0px;font-size:18px;}.control-label{float:left;width:130px;color:#342624;}
+.control-label{float:left;width:130px;color:#342624;}
+.controls{overflow:hidden;zoom:1;margin-left:110px;color:#a41a1d;}
+.control-radio-cicle{float:left;width:94px;height:94px;margin-right:30px;overflow:hidden;zoom:1;line-height:94px;text-align:center;cursor:pointer;}
+.submit-btn{display:block;_display:inline;width:226px;height:54px;margin:20px 0 0 100px;overflow:hidden;zoom:1;color:#fff;text-indent:-80px;cursor:pointer;font-size:26px;color:#e3d4b4;}
+
+.control-cicle-input{width:92px;height:26px;overflow:hidden;zoom:1;text-align:center;background:none;border:none;line-height:26px;font-size:18px;outline: none;}
+.control-group .activate .activate-show{display:block;margin-top:34px;}
+.control-group .activate .activate-hide{display:none;}
+.hide{display:none;}

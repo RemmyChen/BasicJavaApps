@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">/usr/local/Cellar/tomcat/9.0.8/libexec/logs/</Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="fileLogger" fileName="${basePath}/forumapi.log" filePattern="${basePath}/forumapi-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="debug" additivity="false">
+            <!--If specify INFO in the appender-ref, the appender will receive INFO, WARN, ERROR and FATAL events -->
+            <!-- OFF 0; FATAL 100; ERROR 200; WARN 300; INFO 400; DEBUG 500; TRACE 600; ALL Integer.MAX_VALUE -->
+            <appender-ref ref="fileLogger" level="info"/>
+            <appender-ref ref="console" level="info"/>
+        </Root>
+    </Loggers>
+</Configuration>
