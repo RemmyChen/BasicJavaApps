@@ -5,7 +5,22 @@
     </Properties>
 
     <Appenders>
-        <RollingFile name="fileLogger" fileName="${basePath}/forumapi.log" filePattern="${basePath}/forumapi-%d{yyyy-MM-dd}.log">
+        <RollingFile name="fileLogger"
+                     fileName="${basePath}/forumapi.log"
+                     filePattern="${basePath}/forumapi-%d{yyyy-MM-dd}.log"
+                     immediateFlush="false" append="true">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="fileExceptionLogger"
+                     fileName="${basePath}/forumapi-exception.log"
+                     filePattern="${basePath}/forumapi-exeption-%d{yyyy-MM-dd}.log"
+                     immediateFlush="false" append="true">
             <PatternLayout>
                 <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
             </PatternLayout>
@@ -23,6 +38,7 @@
             <!--If specify INFO in the appender-ref, the appender will receive INFO, WARN, ERROR and FATAL events -->
             <!-- OFF 0; FATAL 100; ERROR 200; WARN 300; INFO 400; DEBUG 500; TRACE 600; ALL Integer.MAX_VALUE -->
             <appender-ref ref="fileLogger" level="info"/>
+            <appender-ref ref="fileExceptionLogger" level="error"/>
             <appender-ref ref="console" level="info"/>
         </Root>
     </Loggers>

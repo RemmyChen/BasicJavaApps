@@ -1,6 +1,6 @@
-/Users/remmyc12106937/Desktop/Mi/ForumApi/src/main/java/com/chen/controllers/ForumController.java
-/Users/remmyc12106937/Desktop/Mi/ForumApi/src/main/java/com/chen/controllers/NotBlank.java
-/Users/remmyc12106937/Desktop/Mi/ForumApi/src/main/java/com/chen/model/Flower.java
-/Users/remmyc12106937/Desktop/Mi/ForumApi/src/main/java/com/chen/controllers/ErrorHandler.java
-/Users/remmyc12106937/Desktop/Mi/ForumApi/src/main/java/com/chen/controllers/FlowerResolver.java
-/Users/remmyc12106937/Desktop/Mi/ForumApi/src/main/java/com/chen/controllers/NotBlankParamValidator.java
+/Users/remmyc12106937/Desktop/Mi/BasicJavaApps/ForumApi/src/main/java/com/chen/controllers/ForumController.java
+/Users/remmyc12106937/Desktop/Mi/BasicJavaApps/ForumApi/src/main/java/com/chen/controllers/ErrorHandler.java
+/Users/remmyc12106937/Desktop/Mi/BasicJavaApps/ForumApi/src/main/java/com/chen/model/Flower.java
+/Users/remmyc12106937/Desktop/Mi/BasicJavaApps/ForumApi/src/main/java/com/chen/controllers/NotBlank.java
+/Users/remmyc12106937/Desktop/Mi/BasicJavaApps/ForumApi/src/main/java/com/chen/controllers/NotBlankParamValidator.java
+/Users/remmyc12106937/Desktop/Mi/BasicJavaApps/ForumApi/src/main/java/com/chen/controllers/FlowerResolver.java

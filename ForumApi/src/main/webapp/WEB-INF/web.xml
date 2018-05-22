@@ -6,10 +6,6 @@
          id="WebApp_ID" version="2.5">
     <display-name>rose-example</display-name>
 
-    <context-param>
-        <param-name>portalExecutorCorePoolSize</param-name>
-        <param-value>4</param-value>
-    </context-param>
 
     <context-param>
         <param-name>log4jConfigLocation</param-name>

@@ -8,7 +8,6 @@ import net.paoding.rose.web.annotation.Param;
 import net.paoding.rose.web.annotation.Path;
 import net.paoding.rose.web.annotation.rest.Get;
 import net.paoding.rose.web.annotation.rest.Post;
-import net.paoding.rose.web.portal.Portal;
 import net.paoding.rose.web.var.Model;
 import net.paoding.rose.web.var.Flash;
 import org.slf4j.Logger;
@@ -18,7 +17,6 @@ import org.slf4j.LoggerFactory;
 //显示搜索內容 http://localhost:8080/forumapi/notblank/?id=1
 //显示搜索內容 http://localhost:8080/forumapi/flowerbean/?name=cauliflower&color=white&id=1
 //做web的需求後, 通过return "r:/xxx"来跳转（实际是301）快速跳转显示flash信息 http://localhost:8080/forumapi/flash1
-//把一个网页分成了N个区域，每个区域由不同的action去执行，多线程并行提高cpu使用率 http://localhost:8080/forumapi/webportal
 //显示主帖列表 GET http://localhost:8080/forumapi/topic
 //创建一个主帖 POST http://localhost:8080/forumapi/topic
 //显示单个主帖和它的跟贴 GET http://localhost:8080/forumapi/topic/123
@@ -59,15 +57,6 @@ public class ForumController {
     public String flashStep2(Invocation inv, Flash flash) {
         inv.addModel("info", flash.get("msg"));
         return "flash";
-    }
-
-    // BROKEN
-    //把一个网页分成了N个区域，每个区域由不同的action去执行，多线程并行提高cpu使用率 http://localhost:8080/forumapi/webportal
-    @Get("webportal")
-    public String portal(Portal porta) {
-        porta.addWindow("p1", "wp1");
-        porta.addWindow("p2", "wp2");
-        return "portal";
     }
 
     @Get("wp1")
